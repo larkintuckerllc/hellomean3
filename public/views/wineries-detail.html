@@ -1,0 +1,27 @@
+<div content-for="navbar-top-left">
+	<a href="#/wineries" class="btn btn-navbar">Back</a>
+</div>
+<div class="scrollable">
+	<div class="scrollable-content">
+		<div class="list-group">
+			<div class="list-group-item">
+				<form ng-submit="updateWinery()">
+					<p style="text-align: center;">
+						<input type="text" ng-model="winery.name">
+						<input  type="submit" value="update">
+					</p>
+				</form>
+			</div>
+			<div class="list-group-item">
+				<p style="text-align: center;">
+					<button ng-click="deleteWinery()">Delete</button>
+				</p>
+			</div>
+			<div class="list-group-item">
+				<ul>
+					<li ng-repeat="wine in wines">{{wine.name}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
